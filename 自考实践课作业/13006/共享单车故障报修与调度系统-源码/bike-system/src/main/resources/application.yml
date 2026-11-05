@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: bike-system
+  datasource:
+    url: jdbc:postgresql://localhost:5432/bike_system
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  data:
+    redis:
+      host: localhost
+      port: 6379
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+bike:
+  location:
+    report-interval-sec: 30
+    cache-key-prefix: bike:loc:
